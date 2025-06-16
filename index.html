@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My uBlock Origin User Scripts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Custom uBlock Origin User Scripts</h1>
+        <p>Welcome to my collection of custom uBlock Origin filters and scriptlets. These scripts are designed to enhance your Browse experience by blocking additional annoyances, specific ads, or implementing custom behaviors.</p>
+
+        <h2>How to Use These Scripts</h2>
+        <p>To use these scripts with uBlock Origin, you'll need to add them to your "My filters" or "My rules" in uBlock Origin's dashboard. For scriptlets, you might need to enable "I am an advanced user" in uBlock Origin's settings and configure <code>userResourcesLocation</code>.</p>
+
+        <div class="instructions">
+            <h3>Method 1: Subscribing to a Filter List (Recommended for multiple filters)</h3>
+            <p>If you have a file containing multiple filter rules (e.g., <code>my-filters.txt</code>), you can subscribe to it directly.</p>
+            <ol>
+                <li>Open uBlock Origin's dashboard (click the uBlock Origin icon, then the gears icon).</li>
+                <li>Go to the <strong class="highlight">"Filter lists"</strong> tab.</li>
+                <li>Scroll down and click on <strong class="highlight">"Custom"</strong>, then <strong class="highlight">"Import..."</strong>.</li>
+                <li>Enter the full URL to your filter list file (e.g., <code>https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/my-filters.txt</code>).</li>
+                <li>Click "Apply changes".</li>
+            </ol>
+
+            <h3>Method 2: Adding Individual Filters/Rules to "My filters"</h3>
+            <p>For individual filter rules, you can add them directly to "My filters".</p>
+            <ol>
+                <li>Open uBlock Origin's dashboard.</li>
+                <li>Go to the <strong class="highlight">"My filters"</strong> tab.</li>
+                <li>Copy and paste the desired filter rules from this repository into the text area.</li>
+                <li>Click "Apply changes".</li>
+            </ol>
+
+            <h3>Method 3: Adding Scriptlets to <code>userResourcesLocation</code> (Advanced)</h3>
+            <p>For JavaScript-based scriptlets (e.g., <code>my-scriptlet.js</code>), you'll need to configure <code>userResourcesLocation</code>.</p>
+            <ol>
+                <li>Open uBlock Origin's dashboard.</li>
+                <li>Go to the <strong class="highlight">"Settings"</strong> tab.</li>
+                <li>Enable <strong class="highlight">"I am an advanced user"</strong> and click the small gear icon that appears.</li>
+                <li>Find the <code>userResourcesLocation</code> setting.</li>
+                <li>If it's unset, enter the full URL to your scriptlets file (e.g., <code>https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/my-scriptlets.js</code>). If there's already a URL, add a space after it and then your URL.</li>
+                <li>Click "Apply changes".</li>
+                <li>Then, in your "My filters" tab, you can call the scriptlet using syntax like:
+                    <pre><code>example.com##+js(my-scriptlet)</code></pre>
+                    (Replace <code>my-scriptlet</code> with the name of your scriptlet from the JS file).
+                </li>
+            </ol>
+        </div>
+
+        <h2>My Scripts</h2>
+        <p>Below is a list of my custom uBlock Origin files. Click on a link to view the raw content, which you can then use with the instructions above.</p>
+        <ul>
+            <li><a href="my-filters.txt">my-filters.txt</a> (General filter rules)</li>
+            <li><a href="my-scriptlets.js">my-scriptlets.js</a> (Custom JavaScript scriptlets)</li>
+            <li><a href="another-specific-filter.txt">another-specific-filter.txt</a> (Another specific filter list)</li>
+            </ul>
+
+        <p>Remember to regularly check back for updates!</p>
+        <p>Disclaimer: Use these scripts at your own risk. While I aim for accuracy and safety, I cannot guarantee they will work perfectly for all use cases or that they won't interfere with website functionality.</p>
+    </div>
+</body>
+</html>
