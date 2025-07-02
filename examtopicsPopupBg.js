@@ -1,5 +1,5 @@
-// Removed  ==UserScript== block for uBlock Origin scriptlet
-// Name: ExamtopicsPopupBgRemover
+// Removed ==UserScript== block for uBlock Origin scriptlet
+/// name: examtopicsPopupBg.js
 
 // The window.onurlchange grant is handled by uBlock Origin when you call the scriptlet on examtopics.com, so you don't need it in the scriptlet ==Userscript== block itself.
 // Added checks (if (popupOverlay)) to ensure the elements exist before trying to modify their styles, preventing potential errors.
