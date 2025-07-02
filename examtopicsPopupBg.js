@@ -1,4 +1,4 @@
-// examtopicsPopupBg
+// name: examtopicsPopupBg
 (function() {
     'use strict';
 
