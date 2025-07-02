@@ -1,37 +1,37 @@
-// ==UserScript==
-// @name         ExamtopicsPopupBgRemover
-// @namespace    http://tapermonkey.net/
-// @version      2025-06-16
-// @description  make background transperent !
-// @author       You
-// @match        https://www.examtopics.com/*
-// @icon         https://www.examtopics.com/assets/images/et/favicon/favicon-32x32.png
-// @grant        window.onurlchange
-// ==/UserScript==
+// Removed  ==UserScript== block for uBlock Origin scriptlet
+// Name: ExamtopicsPopupBgRemover
+
+// The window.onurlchange grant is handled by uBlock Origin when you call the scriptlet on examtopics.com, so you don't need it in the scriptlet ==Userscript== block itself.
+// Added checks (if (popupOverlay)) to ensure the elements exist before trying to modify their styles, preventing potential errors.
 
 (function() {
     'use strict';
 
     console.log("hijda");
 
-    //to even affect on internal link path change or routing     give @grant permission  "window.onurlchange"
-    window.addEventListener('urlchange', () => {
-
-        // queryselector   elmnt  #id  .class
+    function removePopup() {
+         // queryselector   elmnt  #id  .class
         const popupOverlay = document.querySelector("#notRemoverPopup");
-          //or
-          //const popupOverlay = document.querySelector(".popup-overlay");
-        popupOverlay.style.backgroundColor = "rgba(0,0,0,0)";
-
+                                    //OR
+        //const popupOverlay = document.querySelector(".popup-overlay");
+        if (popupOverlay) {                                                            
+            popupOverlay.style.backgroundColor = "rgba(0,0,0,0)";
+        }
 
         const popupContent = document.querySelector(".popup-content");
-        popupContent.style.display = "none";
+        if (popupContent) {
+            popupContent.style.display = "none";
+        }
+    }
 
+    //to even affect on internal link path change or routing (for SPA navigation)        give @grant permission  "window.onurlchange"       
+    window.addEventListener('urlchange', () => {
+        
         //delay script run by 1ms
         //setTimeout(()=>{
-
+            removePopup();
         //}, 1);
-
+        
     });
 
 })();
