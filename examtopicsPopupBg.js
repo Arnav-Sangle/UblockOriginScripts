@@ -1,4 +1,4 @@
-/// examtopicsPopupBg.js
+// examtopicsPopupBg.js
 (function() {
     'use strict';
 
