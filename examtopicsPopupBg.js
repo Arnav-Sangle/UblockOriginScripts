@@ -13,11 +13,13 @@
         const popupOverlay = document.querySelector("#notRemoverPopup");
                                     //OR
         //const popupOverlay = document.querySelector(".popup-overlay");
+        console.log("popupOverlay element:", popupOverlay); 
         if (popupOverlay) {                                                            
             popupOverlay.style.backgroundColor = "rgba(0,0,0,0)";
         }
 
         const popupContent = document.querySelector(".popup-content");
+        console.log("popupContent element:", popupContent); 
         if (popupContent) {
             popupContent.style.display = "none";
         }
@@ -28,6 +30,7 @@
         
         //delay script run by 1ms
         //setTimeout(()=>{
+            console.log("URL changed, re-running removePopup.");
             removePopup();
         //}, 1);
         
